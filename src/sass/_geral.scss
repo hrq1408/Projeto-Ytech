@@ -1,0 +1,85 @@
+body {
+	background: $bege-claro;
+	
+	color: $cinza;
+	@include d(s) {
+		border: none;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+p {
+	@include tipo-1(18);
+}
+
+.titulo {
+	@include tipo-1(18);
+	text-transform: uppercase;
+	@include d(s) {
+		margin-bottom: 40px;
+	}
+	&::after {
+		content: '';
+		display: block;
+		width: 75%;
+		float: right;
+		height: 2px;
+		background: $cinza;
+		margin-top: 14px;
+		@include d(m) {
+			width: 60%;
+		}
+	}
+}
+
+.top {
+	--offset: 50px; 
+	
+	position: sticky;
+	bottom: 20px;      
+	margin-right:10px; 
+	place-self: end;
+	margin-top: calc(100vh + var(--offset));
+	
+	/* visual styling */
+	text-decoration: none;
+	padding: 10px;
+	font-family: sans-serif;
+	color: #fff;
+	background: #000;
+	border-radius: 100px;
+	white-space: nowrap;
+  }
+
+
+  .container > h1 {
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+  }
+  
+  p {
+	font-size: 16px;
+	line-height: 1.5;
+  }
+  
+  .sec-about a {
+	text-decoration: underline;
+  }
+  
+  .sec-services h2,
+  .sec-services p {
+	font-weight: 300;
+	text-align: center;
+  }
+  
+  .sec-testimonials p {
+	font-style: italic;
+  }
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	margin: 130px;
+  }
